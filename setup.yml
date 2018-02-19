@@ -1,0 +1,16 @@
+---
+- name: Hello World
+  hosts: server
+
+  tasks:
+
+  - name: setup
+    yum: pkg=nginx state=installed update_cache=true
+
+  - name: start
+    yum: name=nginx state=started
+
+	- name: index.html
+	  template: src=index.html.j2 dest=/usr/share/nginx/html/index.html
+
+  
