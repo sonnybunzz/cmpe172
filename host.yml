@@ -1,3 +1,4 @@
-[server]
-34.200.32.222
+[local]
+localhost
 
+[webserver]
